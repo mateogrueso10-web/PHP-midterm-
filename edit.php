@@ -47,16 +47,16 @@ if(isset($_POST['update'])){
 
 First Name:
 <input type="text" name="first_name" value="<?php echo $row['first_name']; ?>"><br><br> 
-// Pre-fill first name with existing value
+<!-- Pre-fill first name with existing value -->
 Last Name:
 <input type="text" name="last_name" value="<?php echo $row['last_name']; ?>"><br><br>
-// Pre-fill last name with existing value
+<!-- Pre-fill last name with existing value -->
 Phone:
 <input type="text" name="phone" value="<?php echo $row['phone']; ?>"><br><br>
-// Pre-fill phone with existing value
+<!-- Pre-fill phone with existing value -->
 Email:
 <input type="text" name="email" value="<?php echo $row['email']; ?>"><br><br>
-// Pre-fill email with existing value
+<!-- Pre-fill email with existing value -->
 <button type="submit" name="update">Update</button>
-// Submit button to update the record
+<!-- Submit button to update the record -->
 </form>
