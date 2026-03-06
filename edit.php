@@ -60,3 +60,4 @@ Email:
 <button type="submit" name="update">Update</button>
 <!-- Submit button to update the record -->
 </form>
+
