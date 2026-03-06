@@ -1,5 +1,6 @@
 <?php
 require "connect.php";
+include "header.php";
 
 // Get all registrations
 $stmt = $pdo->query("SELECT * FROM registrations");
@@ -8,7 +9,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <h2>Admin Panel</h2>
 <!-- Display registrations in a table -->
-<table border="1">
+<table border="1" cellpadding="10" cellspacing="0" class="table table-striped" class="table table-success table-striped-columns" class="table table-bordered border-primary">
 <!-- Table headers -->
 <tr>
 <th>ID</th>
@@ -20,20 +21,20 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <!-- Loop through registrations and display them -->
 <?php foreach($rows as $row){ ?>
 
-<tr>
+<tr >
 <!-- Display registration details -->
-<td><?php echo $row['id']; ?></td>
+<td><?php echo htmlspecialchars($row['id']); ?></td>
 
-<td><?php echo $row['first_name'] . " " . $row['last_name']; ?></td>
+<td><?php echo htmlspecialchars($row['first_name'] . " " . $row['last_name']); ?></td>
 
-<td><?php echo $row['email']; ?></td>
+<td><?php echo htmlspecialchars($row['email']); ?></td>
 
-<td><?php echo $row['phone']; ?></td>
+<td><?php echo htmlspecialchars($row['phone']); ?></td>
 
 <td>
 <!-- Edit and Delete links -->
-<a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a>
-<a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a>
+<a href="edit.php?id=<?= $member['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
+<a href="delete.php?id=<?= $member['id'] ?>" class="btn btn-sm btn-danger">Delete</a>
 </td>
 
 </tr>

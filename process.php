@@ -1,5 +1,6 @@
 <?php
 require "connect.php";
+include "header.php";
 
 // Sanitize input
 $first_name = htmlspecialchars(trim($_POST['first_name']));

@@ -1,12 +1,14 @@
 
 <!DOCTYPE html>
-<?php require "connect.php"; ?> <!-- Connect to the database using the connect.php file -->
+<?php 
+require "connect.php";
+include "header.php";
+?> <!-- Connect to the database using the connect.php file  and include the header -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Event Registration</title>
-     <!--add bootstrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <!-- Event registration form -->
@@ -26,12 +28,12 @@
         <label for="phone">Phone:</label><br> <!-- Label for phone input -->
         <input type="text" id="phone" name="phone"><br><br> <!-- Input field for phone number -->
 
-        <button type="submit">Register</button> <!-- Submit button to register for the event -->
+        <button type="submit" class="btn btn-sm btn-success">Register</button> <!-- Submit button to register for the event -->
 
     </form>
 
     <p>
-        <a href="admin.php">Go to Admin Page</a> <!-- Link to navigate to the admin page -->
+        <a href="admin.php" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Go to Admin Page</a> <!-- Link to navigate to the admin page -->
     </p>
 
 </body>

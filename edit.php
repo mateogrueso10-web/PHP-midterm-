@@ -1,5 +1,6 @@
 <?php
 require "connect.php";
+include "header.php";
 
 // Get the ID from the URL
 $id = $_GET['id'];
