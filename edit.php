@@ -43,7 +43,7 @@ if(isset($_POST['update'])){
 
 <h2>Edit Registration</h2>
 
-<form method="POST"> // Form to edit registration details
+<form method="POST"> <!-- Form to edit registration details -->
 
 First Name:
 <input type="text" name="first_name" value="<?php echo $row['first_name']; ?>"><br><br> 
